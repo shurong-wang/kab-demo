@@ -1,4 +1,4 @@
-## Contains
+## 数字千分位格式化性能比较
 
 ```javascript
 function toThousands1 (num) {

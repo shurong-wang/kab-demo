@@ -1,4 +1,4 @@
-## Contains
+## 获取元素位置性能比较
 
 ```javascript
 const arr = Array.from(Array(1000000), (v, k) => `a${k+1}`);
