@@ -12,7 +12,7 @@ function unitize(s) {
     });
 }
 
-function unitize(s) {
+function unitize2(s) {
     if (isNaN(s)) {
         return '-';
     }
