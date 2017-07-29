@@ -1,5 +1,5 @@
 // Test configuration for kab
-// Generated on Sat Jul 29 2017 16:36:16 GMT+0800 (CST)
+// Generated on Sat Jul 15 2017 18:57:03 GMT+0800 (CST)
 module.exports = {
 
     node: false,

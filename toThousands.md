@@ -52,7 +52,7 @@ function toThousands4 (num) {
 
 function toThousands5 (num) {
     // return (num || 0).toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,');
-		return (num || 0).toString().replace(/(?=(?!\b)(\d{3})+$)/g, ',');
+	return (num || 0).toString().replace(/(?=(?!\b)(\d{3})+$)/g, ',');
 }
 ```
 

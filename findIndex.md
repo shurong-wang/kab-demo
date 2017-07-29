@@ -1,32 +1,34 @@
-## 获取元素位置性能比较
+# 获取元素位置性能比较
 
 ```javascript
-const arr = Array.from(Array(1000000), (v, k) => `a${k+1}`);
-const obj = {};
-const map = new Map([]);
-let counter = 0
-for (let v of arr) {
-    obj[v] = counter;
-    map.set(v, counter);
-    counter ++;
-}
-const elem = 'a999999';
+const arr = Array.from(Array(10000), (v, k) => `AK${k+1}`);
+
+const obj = arr.reduce((obj, v, k) => {
+  obj[v] = k;
+  return obj;
+}, {});
+
+const map = arr.reduce((map, v, k) => {
+    return map.set(v, k);
+}, new Map());
+
+const val = 'AK4321';
 ```
 
-### Array.indexOf
+## Array.indexOf
 
 ```javascript
-arr.indexOf(elem);
+arr.indexOf(val);
 ```
 
-### Map.get
+## Map.get
 
 ```javascript
-map.get(elem);
+map.get(val);
 ```
 
-### Object.key
+## Object.key
 
 ```javascript
-obj[elem];
+obj[val];
 ```
